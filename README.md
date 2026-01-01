@@ -14,6 +14,7 @@ A beautiful, real-time web dashboard for monitoring the SMC Sessions Expert Advi
 - [Troubleshooting](#troubleshooting)
 - [Requirements](#requirements)
 - [Integration with SMC EA](#integration-with-smc-ea)
+- [GitHub Setup](#github-setup)
 
 ## 🎯 Overview
 
@@ -169,11 +170,12 @@ If the dashboard stops working:
 SMC_Dashboard/
 ├── README.md                          # This file
 ├── DASHBOARD_README.md                # Detailed usage guide
+├── PUSH_TO_GITHUB.md                 # Quick GitHub push guide
 ├── dashboard.html                     # Main dashboard interface
 │
 ├── AUTO_LAUNCH_DASHBOARD.ps1         # Core monitor script
 ├── AUTO_START_MONITOR.ps1            # Smart auto-start checker
-├── SETUP_STARTUP.ps1                 # Startup folder setup
+├── SETUP_STARTUP.ps1                  # Startup folder setup
 ├── START_MONITOR_ON_BOOT.ps1         # Boot monitor script
 │
 ├── SETUP_AUTO_START_SMART.bat        # Smart auto-start setup (recommended)
@@ -342,9 +344,33 @@ This enables the dashboard export feature in the EA.
 ## 📚 Related Documentation
 
 For more information about the SMC Sessions EA:
-- **Main Repository:** [SMC_Sessions_EA](../SMC_Sessions_EA)
+- **Main Repository:** [SMC_Sessions_EA](https://github.com/Danieljacksonc33/SMC_Sessions_EA)
 - **EA README:** See main repository for complete EA documentation
 - **Usage Guide:** See main repository for EA usage instructions
+
+## 🚀 GitHub Setup
+
+This repository is ready to push to GitHub!
+
+### Quick Push (3 Steps)
+
+1. **Create GitHub Repository:**
+   - Go to: https://github.com/new
+   - Name: `SMC_Dashboard`
+   - Don't initialize with README
+
+2. **Add Remote:**
+   ```powershell
+   git remote add origin https://github.com/Danieljacksonc33/SMC_Dashboard.git
+   ```
+
+3. **Push:**
+   ```powershell
+   git branch -M main
+   git push -u origin main
+   ```
+
+For detailed instructions, see `PUSH_TO_GITHUB.md`
 
 ## 🎨 UI/UX Design Philosophy
 
