@@ -1,7 +1,8 @@
 # Smart Monitor Starter - Runs on Windows Boot
 # This script continuously checks for trigger files and starts monitor if needed
 
-$SCRIPT_DIR = "C:\Users\test\OneDrive\Desktop\Trading\all bots\SMC_Sessions_EA\"
+# Get script directory dynamically (works regardless of folder location)
+$SCRIPT_DIR = Split-Path -Parent $MyInvocation.MyCommand.Path
 $MONITOR_SCRIPT = Join-Path $SCRIPT_DIR "AUTO_START_MONITOR.ps1"
 
 # Run the auto-start monitor checker every 30 seconds
