@@ -725,6 +725,20 @@
                 html += '</div>';
             }
 
+            // Multi-Pair Limit Card
+            if (data.multiPairLimit) {
+                html += '<div class="card">';
+                html += '<div class="card-header"><div class="card-title"><div class="card-icon icon-trading">🔢</div> Multi-Pair Limit</div></div>';
+                html += '<div class="info-row"><span class="info-label">Enabled</span><span class="info-value ' + (data.multiPairLimit.enabled ? 'status-yes' : 'status-no') + ' status-indicator">' + (data.multiPairLimit.enabled ? 'Yes' : 'No') + '</span></div>';
+                html += '<div class="info-row"><span class="info-label">Current Pairs</span><span class="info-value large-value">' + (data.multiPairLimit.currentPairs || 0) + ' / ' + (data.multiPairLimit.maxPairs || 0) + '</span></div>';
+                const limitClass = data.multiPairLimit.limitReached ? 'value-negative' : 'value-positive';
+                html += '<div class="info-row"><span class="info-label">Limit Status</span><span class="info-value ' + limitClass + ' status-indicator">' + (data.multiPairLimit.limitReached ? 'REACHED - Setup Search Stopped' : 'OK - Searching for Setups') + '</span></div>';
+                if (data.multiPairLimit.tradingPairs && data.multiPairLimit.tradingPairs.length > 0) {
+                    html += '<div class="info-row"><span class="info-label">Trading Pairs</span><span class="info-value">' + (data.multiPairLimit.tradingPairs || 'None') + '</span></div>';
+                }
+                html += '</div>';
+            }
+
             content.innerHTML = html;
         }
 
